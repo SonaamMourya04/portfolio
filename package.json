@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "homepage": "https://github.com/SonaamMourya04/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/SonaamMourya04/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SonaamMourya04/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "Sonam Mourya",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel  index.html",
+    "build": "parcel index.html",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
