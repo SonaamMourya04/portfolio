@@ -1,13 +1,19 @@
-import React  from "react";
-import ReactDom from "react-dom/client";
-import Header from "./Components/Header";
+import About from "./Components/About";
+import Navbar from "./Components/Navbar";
+import TechStack from "./Components/TechStack";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
+function App() {
+  return (
+    <div className="bg-gray-100 text-gray-900 font-sans scroll-smooth">
+      <Navbar />
+      <About />
+      <TechStack />
+      <Projects />
+      <Contact />
+    </div>
+  );
+}
 
-function App(){
-    return(
-        <div>
-<Header/>
-        </div>
-    );
-};
-//
-ReactDom.createRoot(document.getElementById("root")).render(<App/>)
+export default App;
+ 
