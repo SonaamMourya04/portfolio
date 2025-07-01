@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Shimmer from "./Shimmer"; // Adjust the path as needed
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -181,8 +180,8 @@ const About = () => {
 
             <div className="pt-4">
               <a
-                href="/resume/Sonam_Mourya_Resume.pdf"
-                download="Sonam_Mourya_Resume.pdf"
+                href="/SonamResume.pdf"
+                download="SonamResume.pdf"
                 className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg font-medium hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

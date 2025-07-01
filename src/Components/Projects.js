@@ -70,6 +70,7 @@ const Projects = () => {
         "Implemented user authentication and data persistence with Firebase"
       ],
       tech: ["React", "JavaScript", "Tailwind CSS", "Shimmer UI", "REST API"],
+      video: "/FoodhouseVideo.mp4",
       github: "https://github.com/SonaamMourya04/FoodHouse",
       live: "https://foodhouse-8b803.firebaseapp.com",
       category: "UI/UX",
@@ -404,19 +405,25 @@ const Projects = () => {
 
 
 
-                {/* Video Preview */}
-                <div className="mb-6 relative group/video">
-                  <video
-                    className="w-full h-48 rounded-xl border border-gray-600 group-hover:border-gray-500 transition-colors duration-300 object-cover"
-                    poster="/api/placeholder/400/200"
-                  >
-                    <source src={project.video} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="absolute inset-0 bg-black/50 rounded-xl flex items-center justify-center opacity-0 group-hover/video:opacity-100 transition-opacity duration-300">
-                    <FaPlay className="text-white text-2xl" />
+                {/* Video Preview - Only show if project has video */}
+                {project.video && (
+                  <div className="mb-6 relative group/video">
+                    <video
+                      className="w-full h-48 rounded-xl border border-gray-600 group-hover:border-gray-500 transition-colors duration-300 object-cover"
+                      controls
+                      muted
+                      preload="metadata"
+                      onMouseEnter={(e) => e.target.play()}
+                      onMouseLeave={(e) => e.target.pause()}
+                    >
+                      <source src={project.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <div className="absolute inset-0 bg-black/20 rounded-xl flex items-center justify-center opacity-0 group-hover/video:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <FaPlay className="text-white text-2xl drop-shadow-lg" />
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Action Buttons */}
                 <div className="flex space-x-4">

@@ -18,8 +18,8 @@ const Footer = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Shimmer animation CSS classes
-  const shimmerClasses = "animate-pulse bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 bg-[length:200%_100%] animate-shimmer";
+  // Shimmer animation CSS classes - Pure Tailwind
+  const shimmerClasses = "animate-pulse bg-gray-700";
 
   return (
     <footer className="bg-black border-t border-gray-800 py-12 px-6">
